@@ -1,0 +1,48 @@
+{
+  "name": "jarvis-ai",
+  "productName": "JARVIS AI",
+  "version": "0.1.0",
+  "description": "JARVIS AI - Persian/English desktop assistant",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "ai.jarvis.app",
+    "productName": "JARVIS",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "JARVIS-${version}-Windows-${arch}.${ext}"
+    },
+    "portable": {
+      "splashImage": null
+    }
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}

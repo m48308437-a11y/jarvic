@@ -1,0 +1,22 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>JARVIS AI</title><link rel="stylesheet" href="style.css"></head><body>
+<aside id="side"><div class="logo">JARVIS <b>AI</b><small>Your Intelligent Assistant</small></div>
+<button id="newChat" class="btn">＋ گفتگوی جدید</button><input id="search" placeholder="جست‌وجو در تاریخچه…">
+<div id="list"></div><button id="clearAll" class="btn ghost">پاک‌سازی تاریخچه</button></aside>
+<main><header><div id="core"><i></i></div><div><div id="status">آنلاین</div><small id="stats">—</small></div>
+<button id="setBtn" class="btn ghost">⚙ تنظیمات</button></header>
+<section id="chat"></section>
+<footer><button id="mic" class="btn round" title="میکروفون (فقط با کلیک شما)">🎤</button>
+<textarea id="inp" rows="1" placeholder="پیام خود را اینجا بنویسید…"></textarea>
+<button id="speak" class="btn round" title="پخش/توقف صدا">🔊</button><button id="send" class="btn round">➤</button></footer></main>
+<dialog id="dlg"><h3>تنظیمات</h3>
+<label>آدرس API<input id="s_url"></label><label>مدل<input id="s_model"></label>
+<label>کلید API (رمزنگاری‌شده ذخیره می‌شود)<input id="s_key" type="password" placeholder="خالی = بدون تغییر"></label>
+<label>زمان انتظار (ثانیه)<input id="s_to" type="number" min="5"></label>
+<label>لحن<select id="s_tone"><option value="friendly">دوستانه</option><option value="formal">رسمی</option><option value="expert">تخصصی</option></select></label>
+<label>نگهداری تاریخچه (روز، ۰=همیشه)<input id="s_ret" type="number" min="0"></label>
+<label>سرعت گفتار<input id="s_rate" type="range" min="0.5" max="2" step="0.1" value="1"></label>
+<label><input id="s_mem" type="checkbox"> حافظه مکالمات فعال</label><label><input id="s_mute" type="checkbox"> حالت بی‌صدا</label>
+<div class="row"><button id="s_save" class="btn">ذخیره</button><button id="s_close" class="btn ghost">بستن</button></div></dialog>
+<script src="app.js"></script></body></html>
